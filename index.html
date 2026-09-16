@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weatherly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Weatherly</h1>
+            <p>Get live weather updates anywhere in the world</p>
+        </header>
+
+        <div class="input-section">
+            <div class="input-group">
+                <label for="city">City</label>
+                <input type="text" id="city" placeholder="e.g. London" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <label for="country">Country</label>
+                <input type="text" id="country" placeholder="e.g. GB" autocomplete="off">
+            </div>
+            <div class="input-group">
+                <label for="apiKey">OpenWeatherMap API Key</label>
+                <input type="password" id="apiKey" placeholder="Enter your API key" autocomplete="off">
+            </div>
+            <button id="getWeatherBtn" class="btn">Get Weather</button>
+        </div>
+
+        <div id="message" class="message" role="alert"></div>
+
+        <div id="weatherResult" class="weather-result hidden">
+            <div class="weather-card">
+                <div class="weather-main">
+                    <div class="temp-container">
+                        <span id="temperature" class="temperature">--°</span>
+                        <span class="temp-unit">C</span>
+                    </div>
+                    <div class="weather-icon">
+                        <img id="weatherIcon" src="" alt="Weather condition" width="80" height="80">
+                    </div>
+                </div>
+                <div class="weather-details">
+                    <h2 id="locationName" class="location-name">City, Country</h2>
+                    <p id="condition" class="condition">Weather condition</p>
+                    <div class="extra-info" id="extraInfo">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
