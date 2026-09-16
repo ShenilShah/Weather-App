@@ -1,88 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weatherly - Your Simple Weather App</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Weatherly — Live Weather</title><link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <main class="container">
-        <header class="header">
-            <h1>Weatherly</h1>
-            <p class="subtitle">Get live weather information anywhere</p>
-        </header>
-
-        <section class="card input-section">
-            <div class="form-group">
-                <label for="api-key">OpenWeatherMap API Key</label>
-                <input type="password" id="api-key" placeholder="Enter your API key" autocomplete="off">
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" id="city" placeholder="e.g. London">
-                </div>
-                <div class="form-group">
-                    <label for="country">Country</label>
-                    <input type="text" id="country" placeholder="e.g. UK" maxlength="2">
-                </div>
-            </div>
-
-            <button id="get-weather-btn" class="btn-primary">Get Weather</button>
-        </section>
-
-        <section id="error-section" class="error-section hidden">
-            <p id="error-message"></p>
-        </section>
-
-        <section id="loading-section" class="loading-section hidden">
-            <div class="spinner"></div>
-            <p>Fetching weather data...</p>
-        </section>
-
-        <section id="weather-result" class="weather-card hidden">
-            <div class="weather-main">
-                <div class="location-info">
-                    <h2 class="location-name">London, UK</h2>
-                    <p class="weather-condition">Sunny</p>
-                    <p class="temperature">22°C</p>
-                </div>
-                <div class="weather-icon">
-                    <span class="icon">☀️</span>
-                </div>
-            </div>
-
-            <div class="weather-details">
-                <div class="detail-item">
-                    <span class="detail-label">Humidity</span>
-                    <span class="detail-value">65%</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Wind</span>
-                    <span class="detail-value">5.2 m/s</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Pressure</span>
-                    <span class="detail-value">1013 hPa</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Feels Like</span>
-                    <span class="detail-value">24°C</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Visibility</span>
-                    <span class="detail-value">10 km</span>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>Powered by <a href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeatherMap API</a></p>
-        </footer>
-    </main>
-
-    <script src="script.js"></script>
-</body>
-</html>
+<div class="ambient a1"></div><div class="ambient a2"></div>
+<main class="app">
+<header><div class="brand"><span class="brand-icon">◒</span><div><h1>Weatherly</h1><p>Live weather, beautifully simple.</p></div></div><span class="live"><i></i> LIVE</span></header>
+<section class="search-panel">
+<div class="key-row"><label for="api-key">OpenWeatherMap API key</label><input type="password" id="api-key" placeholder="Paste your API key" autocomplete="off"></div>
+<div class="search-row"><div class="field city"><label for="city">City</label><input id="city" placeholder="Melbourne"></div><div class="field country"><label for="country">Country</label><input id="country" maxlength="2" placeholder="AU"></div><button id="get-weather-btn">Search weather <span>→</span></button></div>
+</section>
+<section id="error-section" class="message hidden"><p id="error-message"></p></section>
+<section id="loading-section" class="loading hidden"><div class="spinner"></div><p>Looking at the sky…</p></section>
+<section id="weather-result" class="weather hidden">
+<div class="hero">
+<div><p class="eyebrow">CURRENT WEATHER</p><h2 class="location-name">Melbourne, AU</h2><p class="weather-condition">Clear sky</p></div>
+<div class="hero-weather"><span class="weather-icon"><span class="icon">☀️</span></span><span class="temperature">22°C</span></div>
+</div>
+<div class="details">
+<article><span class="metric-icon">💧</span><div><small>Humidity</small><strong class="detail-value">65%</strong></div></article>
+<article><span class="metric-icon">💨</span><div><small>Wind</small><strong class="detail-value">5.2 m/s</strong></div></article>
+<article><span class="metric-icon">◉</span><div><small>Pressure</small><strong class="detail-value">1013 hPa</strong></div></article>
+<article><span class="metric-icon">🌡️</span><div><small>Feels like</small><strong class="detail-value">24°C</strong></div></article>
+<article><span class="metric-icon">👁️</span><div><small>Visibility</small><strong class="detail-value">10 km</strong></div></article>
+</div></section>
+<footer>Weather data by <a href="https://openweathermap.org/api" target="_blank" rel="noopener">OpenWeatherMap</a><span>•</span> Weatherly</footer>
+</main><script src="script.js"></script></body></html>
